@@ -6,20 +6,20 @@
 /*   By: vluo <vluo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 17:35:00 by vluo              #+#    #+#             */
-/*   Updated: 2024/11/08 18:11:58 by vluo             ###   ########.fr       */
+/*   Updated: 2024/11/09 17:03:04 by vluo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	sizei(int n)
+static int	sizei(int n)
 {
 	if (n <= 9)
 		return (1);
 	return (1 + sizei(n / 10));
 }
 
-char	*pitoa(int n)
+static char	*pitoa(int n)
 {
 	char	*res;
 	int		si;
@@ -39,7 +39,7 @@ char	*pitoa(int n)
 	return (res);
 }
 
-char	*nitoa(int n)
+static char	*nitoa(int n)
 {
 	char	*res;
 	int		si;

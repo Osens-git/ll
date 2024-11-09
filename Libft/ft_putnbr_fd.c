@@ -12,12 +12,12 @@
 
 #include <unistd.h>
 
-void    ft_putchar_fd(char c, int fd)
+static void    ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
 
-void	ft_putstr_fd(char *s, int fd)
+static void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-void ft_itoa(int n, int fd)
+static void ft_itoa(int n, int fd)
 {
 	if (n == 0)
 		return ;

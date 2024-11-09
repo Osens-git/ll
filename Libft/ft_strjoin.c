@@ -6,11 +6,11 @@
 /*   By: vluo <vluo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:08:18 by vluo              #+#    #+#             */
-/*   Updated: 2024/11/09 15:50:42 by vluo             ###   ########.fr       */
+/*   Updated: 2024/11/09 17:04:27 by vluo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char const *str)
+static int	ft_strlen(char const *str)
 {
 	int	i;
 

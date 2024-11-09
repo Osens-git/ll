@@ -6,13 +6,13 @@
 /*   By: vluo <vluo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:24:10 by vluo              #+#    #+#             */
-/*   Updated: 2024/11/08 17:27:19 by vluo             ###   ########.fr       */
+/*   Updated: 2024/11/09 17:05:02 by vluo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int	in_set(char c, const char *set)
+static int	in_set(char c, const char *set)
 {
 	int	i;
 
@@ -43,7 +43,7 @@ int	in_set(char c, const char *set)
 	return (0);
 }
 
-int	ft_strlen(const char *str)
+static int	ft_strlen(const char *str)
 {
 	int	i;
 

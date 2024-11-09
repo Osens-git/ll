@@ -6,13 +6,13 @@
 /*   By: vluo <vluo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:47:30 by vluo              #+#    #+#             */
-/*   Updated: 2024/11/08 17:30:55 by vluo             ###   ########.fr       */
+/*   Updated: 2024/11/09 17:04:12 by vluo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char const *str)
+static int	ft_strlen(char const *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char const *str)
 	return (i);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
@@ -39,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int	len_spli(char const *s, char c)
+static int	len_spli(char const *s, char c)
 {
 	int	len;
 	int	i;
@@ -57,7 +57,7 @@ int	len_spli(char const *s, char c)
 	return (len + 1);
 }
 
-char	**sp_vide(void)
+static char	**sp_vide(void)
 {
 	char	**sp_vide;
 

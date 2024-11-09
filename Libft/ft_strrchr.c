@@ -6,11 +6,11 @@
 /*   By: vluo <vluo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:03:32 by vluo              #+#    #+#             */
-/*   Updated: 2024/11/07 18:17:23 by vluo             ###   ########.fr       */
+/*   Updated: 2024/11/09 17:04:51 by vluo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *s, int c)
+static char	*ft_strchr(char *s, int c)
 {
 	int	i;
 
