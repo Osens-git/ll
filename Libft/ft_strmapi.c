@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vluo <vluo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 16:08:18 by vluo              #+#    #+#             */
-/*   Updated: 2024/11/09 15:50:42 by vluo             ###   ########.fr       */
+/*   Created: 2024/11/09 15:29:10 by vluo              #+#    #+#             */
+/*   Updated: 2024/11/09 15:29:10 by vluo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 int	ft_strlen(char const *str)
 {
@@ -20,22 +22,34 @@ int	ft_strlen(char const *str)
 	return (i);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
-	int		j;
-	char	*strj;
-
-	strj = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-	if (strj == 0)
+	char	*mapi;
+	
+	mapi = malloc((ft_strlen(s) + 1 ) * sizeof(char));
+	if (mapi == 0)
 		return (0);
 	i = 0;
-	j = 0;
-	while (s1[i])
-		strj[j ++] = s1[i ++];
-	i = 0;
-	while (s2[i])
-		strj[j ++] = s2[i ++];
-	strj[ft_strlen(s1) + ft_strlen(s2)] = '\0';
-	return (strj);
+	while (s[i])
+	{
+		mapi[i] = f(i, s[i]);
+		i ++;
+	}
+	mapi[i] = '\0';
+	return (mapi);	
 }
+
+// char f(unsigned int i, char c)
+// {
+// 	i++;
+// 	c ++;
+// 	return('a');
+// }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char *s = "Hello";
+// 	printf("%s", ft_strmapi(s, f));
+// }
